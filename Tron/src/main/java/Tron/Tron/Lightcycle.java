@@ -38,6 +38,8 @@ public class Lightcycle  implements ActionListener, KeyListener
 	public Point head, head2;
 
 	public boolean over = false, over2 = false, pause;
+	
+	public int WinRed = 0 , WinBlue = 0;
 
 	public Dimension dim;
 
@@ -46,7 +48,7 @@ public class Lightcycle  implements ActionListener, KeyListener
 		dim = Toolkit.getDefaultToolkit().getScreenSize();
 		jframe = new JFrame("TRON");
 		jframe.setVisible(true);
-		jframe.setSize(817, 710);
+		jframe.setSize(600, 400);
 		jframe.setResizable(false);
 		jframe.setLocation(dim.width / 2 - jframe.getWidth() / 2, dim.height / 2 - jframe.getHeight() / 2);
 		jframe.add(Panel = new Panel());
@@ -64,8 +66,8 @@ public class Lightcycle  implements ActionListener, KeyListener
 		ticks = 0;
 		direction = DOWN;
 		direction2 = UP;
-		head = new Point(0, -1);
-		head2 = new Point(79,66 );
+		head = new Point(0, 0);
+		head2 = new Point(57,35 );
 		wall.clear();
 		wall2.clear();
 		timer.start();
@@ -76,7 +78,7 @@ public class Lightcycle  implements ActionListener, KeyListener
 		Panel.repaint();
 		ticks++;
 
-		if (ticks % 2 == 0 && head != null && !over && !pause)
+		if (ticks % 3 == 0 && head != null && !over && !over2 && !pause)
 		{
 			time++;
 
@@ -91,19 +93,21 @@ public class Lightcycle  implements ActionListener, KeyListener
 				else
 				{
 					over = true;
+					WinRed ++;
 
 				}
 			}
 
 			if (direction == DOWN)
 			{
-				if (head.y + 1 < 67 && CheckCollision(head.x, head.y + 1))
+				if (head.y + 1 < 36 && CheckCollision(head.x, head.y + 1))
 				{
 					head = new Point(head.x, head.y + 1);
 				}
 				else
 				{
 					over = true;
+					WinRed ++;
 				}
 			}
 
@@ -116,27 +120,29 @@ public class Lightcycle  implements ActionListener, KeyListener
 				else
 				{
 					over = true;
+					WinRed ++;
 				}
 			}
 
 			if (direction == RIGHT)
 			{
-				if (head.x + 1 < 80 && CheckCollision(head.x + 1, head.y))
+				if (head.x + 1 < 58 && CheckCollision(head.x + 1, head.y))
 				{
 					head = new Point(head.x + 1, head.y);
 				}
 				else
 				{
 					over = true;
+					WinRed ++;
 				}
 			}
 
 		}
 		
 		
-		if (ticks % 2 == 0 && head2 != null && !over && !pause)
+		if (ticks % 3 == 0 && head2 != null && !over &&!over2 && !pause)
 		{
-
+			time++; 
 			wall2.add(new Point(head2.x, head2.y));
 
 			if (direction2 == UP)
@@ -148,19 +154,21 @@ public class Lightcycle  implements ActionListener, KeyListener
 				else
 				{
 					over2 = true;
+					WinBlue ++;
 
 				}
 			}
 
 			if (direction2 == DOWN)
 			{
-				if (head2.y + 1 < 67 && CheckCollision(head2.x, head2.y + 1))
+				if (head2.y + 1 < 36 && CheckCollision(head2.x, head2.y + 1))
 				{
 					head2 = new Point(head2.x, head2.y + 1);
 				}
 				else
 				{
 					over2 = true;
+					WinBlue ++;
 				}
 			}
 
@@ -173,22 +181,26 @@ public class Lightcycle  implements ActionListener, KeyListener
 				else
 				{
 					over2 = true;
+					WinBlue ++;
 				}
 			}
 
 			if (direction2 == RIGHT)
 			{
-				if (head2.x + 1 < 80 && CheckCollision(head2.x + 1, head.y))
+				if (head2.x + 1 < 58 && CheckCollision(head2.x + 1, head.y))
 				{
 					head2 = new Point(head2.x + 1, head2.y);
 				}
 				else
 				{
 					over2 = true;
+					WinBlue ++;
 				}
 			}
 
 		}
+		
+		
 	}
 
 	public boolean CheckCollision(int x, int y)

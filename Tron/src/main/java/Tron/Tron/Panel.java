@@ -16,7 +16,7 @@ public class Panel extends JPanel {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	public static final Color color1 = new Color(2373693);
+	public static final Color color1 = new Color(6179);
 	public static final Color color2 = new Color(3632844);
 	public static final Color color3 = new Color(13842231);
 	public static final Color color4 = new Color(8158332);
@@ -60,7 +60,7 @@ public class Panel extends JPanel {
 		
 		
 		g.setColor(Color.white);
-		String string = "Time: " + lightcycle.time / 20;
+		String string = "BLUE WIN: " + lightcycle.WinBlue + "     Time: " + lightcycle.time / 20 + "     RED WIN: " + lightcycle.WinRed;
 		g.drawString(string, (int) (getWidth() / 2 - string.length() * 2.5f), 10);
 		
 	
