@@ -13,9 +13,7 @@ import java.util.ArrayList;
 import javax.swing.JFrame;
 import javax.swing.Timer;
 
-/**
- * @author Jaryt Bustard
- */
+
 public class Lightcycle  implements ActionListener, KeyListener
 {
 
@@ -42,7 +40,10 @@ public class Lightcycle  implements ActionListener, KeyListener
 	public int WinRed = 0 , WinBlue = 0;
 
 	public Dimension dim;
-
+	
+/**
+ * Ce constructeur permet de créer une fenêtre et de lancer le jeu
+ */
 	public Lightcycle()
 	{
 		dim = Toolkit.getDefaultToolkit().getScreenSize();
@@ -56,7 +57,9 @@ public class Lightcycle  implements ActionListener, KeyListener
 		jframe.addKeyListener(this);
 		startGame();
 	}
-
+/**
+ * Cette méthode initialise tous les attributs pour le lancement du jeu
+ */
 	public void startGame()
 	{
 		over = false;
@@ -72,7 +75,9 @@ public class Lightcycle  implements ActionListener, KeyListener
 		wall2.clear();
 		timer.start();
 	}
-
+/**
+ * Cette méthode permet le déplacement des murs
+ */
 	public void actionPerformed(ActionEvent arg0)
 	{
 		Panel.repaint();
@@ -202,7 +207,12 @@ public class Lightcycle  implements ActionListener, KeyListener
 		
 		
 	}
-
+/**
+ * Cette méthode détecte s'il y a eu une collision dans un mur
+ * @param x
+ * @param y
+ * @return  vrai ou faux 
+ */
 	public boolean CheckCollision(int x, int y)
 	{
 		for (Point point : wall)
@@ -227,14 +237,19 @@ public class Lightcycle  implements ActionListener, KeyListener
 	
 
 	
-
+/**
+ * Cette méthode instancie lightcycle
+ * 
+ */
 	public static void main(String[] args)
 	{
 		lightcycle = new Lightcycle();
 	}
 
 	
-	
+	/**
+	 * Cette méthode détecte les touches du clavier et leur assignent une direction/faire pause/recommencer la partie
+	 */
 	public void keyPressed(KeyEvent e)
 	{
 		int i = e.getKeyCode();
@@ -294,12 +309,16 @@ public class Lightcycle  implements ActionListener, KeyListener
 		}
 	}
 
-	
+	/**
+	 * 
+	 */
 	public void keyReleased(KeyEvent e)
 	{
 	}
 
-	
+	/**
+	 * 
+	 */
 	public void keyTyped(KeyEvent e)
 	{
 	}

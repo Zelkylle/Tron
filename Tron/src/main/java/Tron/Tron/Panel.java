@@ -12,16 +12,16 @@ import javax.swing.JPanel;
 
 public class Panel extends JPanel {
 
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 	public static final Color color1 = new Color(6179);
 	public static final Color color2 = new Color(3632844);
 	public static final Color color3 = new Color(13842231);
 	public static final Color color4 = new Color(8158332);
 	
-	@Override
+	/**
+	 * Permet d'afficher toutes les caractéristiques du jeu
+	 */
 	protected void paintComponent(Graphics g)
 	{
 		super.paintComponent(g);
