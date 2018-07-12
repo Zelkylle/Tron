@@ -6,7 +6,9 @@ import Tron.Tron.Lightcycle;
 
 public class LightcycleTest {
 	
-
+/**
+ * Permet de tester si la fonction CheckCollision fonctionne bien
+ */
 	@Test
 	public void CheckCollisionTest() {
 		Lightcycle lightcycle = new Lightcycle();
