@@ -42,7 +42,7 @@ public class Lightcycle  implements ActionListener, KeyListener
 	public Dimension dim;
 	
 /**
- * Ce constructeur permet de créer une fenêtre et de lancer le jeu
+ * Ce constructeur permet de creer une fenetre et de lancer le jeu
  */
 	public Lightcycle()
 	{
@@ -58,7 +58,7 @@ public class Lightcycle  implements ActionListener, KeyListener
 		startGame();
 	}
 /**
- * Cette méthode initialise tous les attributs pour le lancement du jeu
+ * Cette methode initialise tous les attributs pour le lancement du jeu
  */
 	public void startGame()
 	{
@@ -76,7 +76,7 @@ public class Lightcycle  implements ActionListener, KeyListener
 		timer.start();
 	}
 /**
- * Cette méthode permet le déplacement des murs
+ * Cette methode permet le deplacement des murs
  */
 	public void actionPerformed(ActionEvent arg0)
 	{
@@ -208,7 +208,7 @@ public class Lightcycle  implements ActionListener, KeyListener
 		
 	}
 /**
- * Cette méthode détecte s'il y a eu une collision dans un mur
+ * Cette methode detecte s'il y a eu une collision dans un mur
  * @param x
  * @param y
  * @return  vrai ou faux 
@@ -238,7 +238,7 @@ public class Lightcycle  implements ActionListener, KeyListener
 
 	
 /**
- * Cette méthode instancie lightcycle
+ * Cette methode instancie lightcycle
  * 
  */
 	public static void main(String[] args)
@@ -248,7 +248,7 @@ public class Lightcycle  implements ActionListener, KeyListener
 
 	
 	/**
-	 * Cette méthode détecte les touches du clavier et leur assignent une direction/faire pause/recommencer la partie
+	 * Cette methode detecte les touches du clavier et leur assignent une direction/faire pause/recommencer la partie
 	 */
 	public void keyPressed(KeyEvent e)
 	{
