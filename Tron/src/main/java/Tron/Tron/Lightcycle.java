@@ -57,7 +57,7 @@ public class Lightcycle  implements ActionListener, KeyListener
 		jframe.addKeyListener(this);
 		startGame();
 	}
-/**
+/**sdzddd
  * Cette methode initialise tous les attributs pour le lancement du jeu
  */
 	public void startGame()

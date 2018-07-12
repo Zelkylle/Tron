@@ -16,4 +16,9 @@ public class LightcycleTest {
 		Assert.assertTrue("devrait étre vraie", result);
 	}
 	
+	@Test
+	public void Test() {
+		
+	}
+	
 }
