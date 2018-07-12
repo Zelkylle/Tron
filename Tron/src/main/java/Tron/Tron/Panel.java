@@ -33,7 +33,7 @@ public class Panel extends JPanel {
 
 		g.setColor(color1);
 		
-		g.fillRect(0, 0, 817, 710);
+		g.fillRect(0, 0, 600, 400);
 		
 
 		g.setColor(color2);
@@ -86,7 +86,7 @@ public class Panel extends JPanel {
 
 		string = "Pause !";
 
-		if (lightcycle.pause && !lightcycle.over)
+		if (lightcycle.pause && !lightcycle.over && !lightcycle.over2)
 		{
 			g.drawString(string, (int) (getWidth() / 2 - string.length() * 2.5f), (int) lightcycle.dim.getHeight() / 4);
 		}
